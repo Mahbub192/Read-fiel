@@ -1,0 +1,33 @@
+#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+int main()
+{
+    //file creat
+    ofstream Myfile("File.text");
+
+    //write fiel
+    Myfile<<"File can be tricky, but it is fun enough!";
+
+    //close file
+    Myfile.close();
+
+    //Create a text string, which is used to output the text file
+
+    string mytext;
+
+    //Read from the test file
+     ifstream MyReadFile("file.text");
+
+     //use a while loop together with the getline() function to read the file line bu line
+     while(getline(MyReadFile,mytext))
+     {
+         //output the text from the file
+         cout<< mytext;
+     }
+
+     //close the file
+     cout<<"\n";-
+     MyReadFile.close();
+}
